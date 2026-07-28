@@ -114,32 +114,33 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 6.  Log in with `ADMIN_EMAIL_ID` / `ADMIN_PASSWORD` to reach the Admin Dashboard, or sign up as a regular user to reach the agent tabs.
 
 ---
+
 ## 8. Screenshots
 
 *   **Home page**
     
-    (Drag and drop your home_page image right here!)
+    ![Home page](screenshots/home_page.png_2.png)
 
 *   **AI Copilot (prompt + response)**
     
-    (Drag and drop your ai_copilot image right here!)
+    ![AI Copilot](screenshots/ai_copilot.png_2.png)
 
 *   **ML Pricing Calculator (input + predicted cost)**
     
-    (Drag and drop your ml_pricing image right here!)
+    ![ML Pricing Calculator](screenshots/ml_pricing.png_2.jpeg)
 
 *   **Admin Panel → ML Model Card tab (R²/RMSE and all agent metrics)**
     
-    (Drag and drop your model_card image right here!)
+    ![ML Model Card](screenshots/model_card.png_2.png)
 
 *   **Admin Panel → Add / Delete / Unlock user actions**
     
-    (Drag and drop your admin_users image right here!)
+    ![Admin Users](screenshots/admin.users.png_2.jpeg)
 
 *   **A triggered lockout message**
     
-    (Drag and drop your lockout image right here!)
+    ![Lockout Message](screenshots/lockout.png_2.jpeg)
 
 *   **An OTP cooldown message**
     
-    (Drag and drop your otp_cooldown image right here!)
+    ![OTP Cooldown](screenshots/otp_cooldown.png_2.jpeg)
