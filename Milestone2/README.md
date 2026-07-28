@@ -119,23 +119,23 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 
 ## 8. Screenshots
 
-- Login / Signup (with password strength badge) 
-  ![Login/Signup](screenshots/signup{with_password_strength_badge}.png)
+*   **Login / Signup (with password strength badge)**
+    ![Login/Signup](screenshots/signup{with_password_strength_badge}.png)
 
-- AI Copilot (prompt + response) 
-  ![AI Copilot](screenshots/ai_copilot.png_4.png)
+*   **AI Copilot (prompt + response)**
+    ![AI Copilot](screenshots/ai_copilot.png_4.png)
 
-- ML Pricing Calculator (input + predicted cost)
-  ![ML Pricing Calculator](screenshots/ml_pricing.png_4.jpeg)
+*   **ML Pricing Calculator (input + predicted cost)**
+    ![ML Pricing Calculator](screenshots/ml_pricing.png_4.jpeg)
 
-- Admin Panel → ML Model Card tab
-  ![ML Model Card](screenshots/model_card.png_4.png)
+*   **Admin Panel → ML Model Card tab**
+    ![ML Model Card](screenshots/model_card.png_4.png)
 
-- Admin Panel → Add / Delete / Unlock user actions
-  ![Admin Users](screenshots/admin.users.png_4.jpeg)
+*   **Admin Panel → Add / Delete / Unlock user actions**
+    ![Admin Users](screenshots/admin.users.png_4.jpeg)
 
-- A triggered lockout message 
-  ![Lockout Message](screenshots/lockout.png_4.jpeg)
+*   **A triggered lockout message**
+    ![Lockout Message](screenshots/lockout.png_4.jpeg)
 
-- An OTP cooldown message
-  ![OTP Cooldown](screenshots/otp_cooldown.png_4.jpeg)
+*   **An OTP cooldown message**
+    ![OTP Cooldown](screenshots/otp_cooldown.png_4.jpeg)
