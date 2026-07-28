@@ -118,30 +118,28 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 
 *   **Home page**
     
-    ![Home page](screenshots/home_page.png.png)
+    (Drag and drop your home_page image right here!)
 
 *   **AI Copilot (prompt + response)**
     
-    ![AI Copilot](screenshots/ai_copilot.png.png)
+    (Drag and drop your ai_copilot image right here!)
 
 *   **ML Pricing Calculator (input + predicted cost)**
     
-    ![ML Pricing Calculator](screenshots/ml_pricing.png.jpeg)
+    (Drag and drop your ml_pricing image right here!)
 
 *   **Admin Panel → ML Model Card tab (R²/RMSE and all agent metrics)**
     
-    ![ML Model Card](screenshots/model_card.png.png)
+    (Drag and drop your model_card image right here!)
 
 *   **Admin Panel → Add / Delete / Unlock user actions**
     
-    ![Admin Users](screenshots/admin.users.png.jpeg)
+    (Drag and drop your admin_users image right here!)
 
 *   **A triggered lockout message**
     
-    ![Lockout Message](screenshots/lockout.png.jpeg)
+    (Drag and drop your lockout image right here!)
 
 *   **An OTP cooldown message**
     
-    ![OTP Cooldown](screenshots/otp_cooldown.png.jpeg)
-
-    ![OTP Cooldown](screenshots/otp_cooldown.png.jpeg)
+    (Drag and drop your otp_cooldown image right here!)
