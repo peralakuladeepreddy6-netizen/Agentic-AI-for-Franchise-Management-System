@@ -119,9 +119,21 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 
 The following screenshots verify the system functionalities and are saved in the `screenshots/` folder:
 
-*   **Home page:** `![Home page](screenshots/home_page.png.png)`
-*   **AI Copilot (prompt + response):** `![AI Copilot](screenshots/ai_copilot.png.png)`
-*   **ML Pricing Calculator (input + predicted cost):** `![ML Pricing Calculator](screenshots/ml_pricing.png.jpeg)`
-*   **Admin Panel → ML Model Card tab (R²/RMSE and all agent metrics):** `![ML Model Card](screenshots/model_card.png.png)`
-*   **Admin Panel → Add / Delete / Unlock user actions:** `![Admin Users](screenshots/admin.users.png.jpeg)`
-*   **A triggered lockout message and an OTP cooldown message:** `![Lockout Message](screenshots/lockout.png.jpeg)` and `![OTP Cooldown](screenshots/otp_cooldown.png.jpeg)`
+*   **Home page:** 
+![Home page](screenshots/home_page.png.png)
+
+*   **AI Copilot (prompt + response):** 
+![AI Copilot](screenshots/ai_copilot.png.png)
+
+*   **ML Pricing Calculator (input + predicted cost):** 
+![ML Pricing Calculator](screenshots/ml_pricing.png.jpeg)
+
+*   **Admin Panel → ML Model Card tab (R²/RMSE and all agent metrics):** 
+![ML Model Card](screenshots/model_card.png.png)
+
+*   **Admin Panel → Add / Delete / Unlock user actions:** 
+![Admin Users](screenshots/admin.users.png.jpeg)
+
+*   **A triggered lockout message and an OTP cooldown message:** 
+![Lockout Message](screenshots/lockout.png.jpeg) 
+![OTP Cooldown](screenshots/otp_cooldown.png.jpeg)
