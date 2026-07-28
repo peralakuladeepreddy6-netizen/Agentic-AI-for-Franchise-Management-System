@@ -114,7 +114,6 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 6.  Log in with `ADMIN_EMAIL_ID` / `ADMIN_PASSWORD` to reach the Admin Dashboard, or sign up as a regular user to reach the agent tabs.
 
 ---
-
 ## 8. Screenshots
 
 *   **Home page**
@@ -143,4 +142,6 @@ Click the key icon (Secrets) in the left sidebar, add each of these, and toggle 
 
 *   **An OTP cooldown message**
     
+    ![OTP Cooldown](screenshots/otp_cooldown.png.jpeg)
+
     ![OTP Cooldown](screenshots/otp_cooldown.png.jpeg)
