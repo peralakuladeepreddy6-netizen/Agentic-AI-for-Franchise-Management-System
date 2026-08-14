@@ -1,1 +1,125 @@
+Milestone 3: Retrieval-Augmented Generation (RAG) Pipeline
+Turning 500+ scattered regulatory documents into a single, instant, and verifiable question-answering system for Franchise QSR operations.
 
+Project Overview
+In a Franchise QSR business, store managers face thousands of pages of compliance rules—spanning FSSAI food safety, OSHA labor laws, GST taxation, and internal Standard Operating Procedures (SOPs).
+
+This project builds a semantic search engine (RAG pipeline) that:
+
+Scrapes 100+ trusted regulatory websites and 500+ PDFs.
+Stores them as searchable text chunks.
+Converts them into mathematical vectors (embeddings).
+Retrieves the exact answer to any operational question in milliseconds—along with the verifiable source.
+Architecture
+RAG Architecture
+
+The pipeline is divided into two distinct notebooks (as per Milestone 3 requirements):
+
+Notebook	Purpose
+Milestone_1_2_Scraping_Preprocessing.ipynb	Web scraping, PDF harvesting, text extraction, and caching.
+Milestone_3_RAG_Pipeline.ipynb	Chunking, Embedding, FAISS indexing, and Interactive Querying.
+Flow Diagram
+Web/PDF Sources
+↓
+Scraping & Text Extraction (PyMuPDF + BeautifulSoup)
+↓
+Caching (manifest.json + .txt files in Google Drive)
+↓
+Chunking (RecursiveCharacterTextSplitter - 1000 chars, 100 overlap)
+↓
+Embedding (HuggingFace all-MiniLM-L6-v2 → 384-dim vectors)
+↓
+Vector Store (FAISS - Facebook AI Similarity Search)
+↓
+Interactive Query Loop (Semantic Search + Source Attribution)
+Technologies Used
+Category	Libraries / Tools
+Web Scraping	requests, BeautifulSoup (bs4)
+PDF Parsing	PyMuPDF (fitz)
+Text Splitting	langchain_text_splitters.RecursiveCharacterTextSplitter
+Embeddings	sentence-transformers + langchain_community.embeddings.HuggingFaceEmbeddings (Model: all-MiniLM-L6-v2)
+Vector Database	FAISS (Facebook AI Similarity Search)
+Environment	Google Colab, Google Drive (persistent storage)
+Language	Python 3.10+
+Key Features
+1. Hybrid Data Ingestion
+Static Lists: 116 manually curated HTML sources + 109 direct PDF links.
+Auto-Harvesting: Scans every scraped HTML page for hidden PDF links, dynamically expanding the dataset. In our run, this auto-discovered 435 additional PDFs.
+Incremental Caching: Uses a manifest.json to track which URLs have been successfully scraped, preventing redundant downloads and saving time.
+2. Robust Text Extraction
+Extracts text from both HTML and PDF files.
+Saves extracted text as .txt files in Google Drive for persistent storage.
+Handles failures gracefully (e.g., scanned images, broken links).
+3. Curated Knowledge Base (SOPs)
+Manually added 65 domain-specific SOPs (KB-101 to KB-165) covering:
+
+Food Safety (Temperature logs, Handwashing, Cross-contamination).
+HR Compliance (POSH Act, Grievance handling, Performance reviews).
+Operations (Cash handling, POS downtime, Shift requirements).
+Legal (FSSAI penalties, Franchise renewal terms, CCTV retention).
+4. Semantic Search
+Converts text into 384-dimensional dense vectors using all-MiniLM-L6-v2.
+Stores vectors in FAISS for ultra-fast similarity search.
+Retrieves the top-k most relevant chunks for any user query.
+5. Explainable & Verifiable Answers
+Every answer is accompanied by the exact source (e.g., curated_sops | KB-101 or pdf_osha.pdf.txt).
+Eliminates "hallucinations" by strictly returning retrieved text.
+Dataset Statistics
+Metric	Value
+HTML Sources	116
+PDF Sources (Static)	109
+Auto-Discovered PDFs	435
+Total Unique PDFs Processed	543
+Successfully Scraped PDFs	13 (text-based)
+Successfully Scraped HTML	17+ (cached)
+Total .txt files in RAG_DIR	338
+Curated SOPs	65
+Total Documents in Memory	403
+Total Chunks after Splitting	18,255
+FAISS Index Saved	franchiseops_faiss_index (Drive & Local)
+How to Run
+Prerequisites
+Google Colab account.
+Google Drive mounted.
+Internet connection for downloading the embedding model.
+Step 1: Run the Scraping Notebook
+Open Milestone_1_2_Scraping_Preprocessing.ipynb.
+Mount your Google Drive.
+Run all cells. The scraper will:
+Scrape HTML pages.
+Auto-discover PDFs.
+Download and extract text from PDFs.
+Save everything to rag_documents in your Drive.
+Step 2: Run the RAG Pipeline Notebook
+Open Milestone_3_RAG_Pipeline.ipynb.
+Mount your Google Drive.
+Run all cells. This will:
+Load all .txt files from rag_documents.
+Add the curated SOPs.
+Split text into chunks.
+Generate embeddings and build the FAISS index.
+Launch the interactive query loop.
+Step 3: Ask Questions
+Once the query loop is running, type your questions:
+
+The system will return the top 3 matching chunks with source attribution.
+
+Example Test Queries
+What is the handwashing procedure?
+What are the penalties for FSSAI non-compliance?
+What is the POSH Act requirement in India?
+How often should supplier audits be conducted?
+What are the EU limits for Ethylene Oxide in spices?
+What is the protocol for glass breakage near food prep areas?
+Testing & Validation
+Successfully passed 30+ distinct test queries across multiple domains (Food Safety, HR Compliance, Operations, Finance, Regulatory).
+Rigorous testing included:
+Exact Match Queries (e.g., freezer temperature → -18°C).
+Semantic Queries (e.g., "How to prevent cross-contamination?" → retrieved color-coded boards).
+Hybrid Queries (pulling from both SOPs and scraped PDFs).
+Future Scope / Enhancements
+Generative AI Integration (LLM): Add Gemini or GPT to convert retrieved snippets into polished, conversational answers (true RAG).
+OCR Support: Implement Tesseract to read scanned PDFs (currently, many government PDFs are images).
+JavaScript Rendering: Upgrade to Selenium/Playwright to scrape dynamic websites.
+Multi-modal Search: Add image/table extraction from PDFs.
+Deployment: Wrap the pipeline in a Streamlit or Gradio web interface for non-technical users.
